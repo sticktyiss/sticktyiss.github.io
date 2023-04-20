@@ -1,6 +1,6 @@
 body {
   height: 100vh;
-  background-color: #945659;
+  background-color: #ebbab9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,18 +10,17 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 75vh;
   width: 100vw;
+  background-color: #945659;
 }
 #sideBar {
   z-index: 10;
   background-color: #ebbab9;
   width: 20vw;
-  height: 70vh;
-  border-top-right-radius: 5vw;
-  border-bottom-right-radius: 5vw;
-  position: sticky;
-  top: 15vh;
+  height: 60vh;
+  border-top-right-radius: 10vh;
+  border-bottom-right-radius: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,8 +67,24 @@ section {
   /* align-content: center; */
 }
 section p {
-  margin: auto;
   width: 60vw;
+  margin: auto;
+  padding: 1vh;
+}
+#home p {
+  color: #ebbab9;
+}
+#intro p {
+  color: #363634;
+}
+#projects p {
+  color: #945659;
+}
+#skills p {
+  color: #643738;
+}
+#contact p {
+  color: #120e0e;
 }
 .hide {
   display: none;

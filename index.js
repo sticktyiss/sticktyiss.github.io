@@ -21,13 +21,18 @@ const buttonFX = (x, y, color1, color2) => {
   circle.style.zIndex = 11;
   document.body.appendChild(circle);
   setTimeout(() => {
-    circle.style.transitionDuration = '2s';
+    circle.style.transitionDuration = '1s';
     circle.style.transform = 'scale(1)';
   }, 100);
   setTimeout(() => {
-    circle.style.display = 'none';
-    document.body.style.backgroundColor = color2;
+    circle.style.transitionDuration = '1s';
+    circle.style.transform = 'scale(0)';
+    document.body.style.backgroundColor = color1;
     sideBar.style.backgroundColor = color1;
+    document.querySelector('main').style.backgroundColor = color2;
+  }, 1000);
+  setTimeout(() => {
+    circle.style.display = 'none';
   }, 2000);
 }
 
