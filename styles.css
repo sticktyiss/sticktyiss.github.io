@@ -1,3 +1,76 @@
-h1 {
-  color: red;
+body {
+  height: 100vh;
+  background-color: #945659;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 100vw;
+}
+#sideBar {
+  z-index: 10;
+  background-color: #ebbab9;
+  width: 20vw;
+  height: 70vh;
+  border-top-right-radius: 5vw;
+  border-bottom-right-radius: 5vw;
+  position: sticky;
+  top: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#sideBar img {
+  margin: 3vh;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  border: .8vw solid #ebbab9;
+  cursor: pointer;
+}
+#sideBar button {
+  background-color: transparent;
+  border: 2px solid transparent;
+  margin: 1vh;
+  padding: 5px 10px 5px 10px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+#sideBar button:hover {
+  border: 2px solid white;
+  border-radius: 2vh;
+}
+#introBtn {
+  color: #363634;
+}
+#projectsBtn {
+  color: #945659;
+}
+#skillsBtn {
+  color: #643738;
+}
+#contactBtn {
+  color: #120e0e;
+}
+section {
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* align-content: center; */
+}
+section p {
+  margin: auto;
+  width: 60vw;
+}
+.hide {
+  display: none;
 }
