@@ -31,7 +31,7 @@ main {
   width: 10vw;
   height: 10vw;
   border-radius: 50%;
-  border: .8vw solid #ebbab9;
+  border: .8vw solid #945659;
   cursor: pointer;
 }
 #sideBar button {
@@ -39,7 +39,7 @@ main {
   border: 2px solid transparent;
   margin: 1vh;
   padding: 5px 10px 5px 10px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Comfortaa', cursive;
   font-weight: bold;
   cursor: pointer;
 }
@@ -60,30 +60,46 @@ main {
   color: #120e0e;
 }
 section {
-  width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  width: 60vw;
+  height: 90%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  /* align-content: center; */
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow: auto;
 }
 section p {
-  width: 60vw;
-  margin: auto;
   padding: 1vh;
+  width: 80%;
+  font-family: 'Comfortaa', cursive;
+  text-indent: 5%;
+  font-weight: 600;
 }
-#home p {
+#home {
   color: #ebbab9;
+  align-items: center;
+  font-family: 'Comfortaa', cursive;
 }
-#intro p {
+#home h1 {
+  font-size: 14vh;
+  /* margin: 3vh; */
+  margin-top: 18%;
+}
+#home h2 {
+  font-size: 5vh;
+  margin: 4vh;
+}
+#intro {
   color: #363634;
 }
-#projects p {
+#projects {
   color: #945659;
 }
-#skills p {
+#skills {
   color: #643738;
 }
-#contact p {
+#contact {
   color: #120e0e;
 }
 .hide {

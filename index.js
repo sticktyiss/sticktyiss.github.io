@@ -4,6 +4,11 @@ const projectsBtn = document.querySelector('#projectsBtn');
 const skillsBtn = document.querySelector('#skillsBtn');
 const contactBtn = document.querySelector('#contactBtn');
 const sideBar = document.querySelector('#sideBar');
+const home = document.querySelector('#home')
+const intro = document.querySelector('#intro')
+const projects = document.querySelector('#projects')
+const skills = document.querySelector('#skills')
+const contact = document.querySelector('#contact')
 
 
 const buttonFX = (x, y, color1, color2) => {
@@ -29,20 +34,58 @@ const buttonFX = (x, y, color1, color2) => {
     circle.style.transform = 'scale(0)';
     document.body.style.backgroundColor = color1;
     sideBar.style.backgroundColor = color1;
-    document.querySelector('main').style.backgroundColor = color2;
+    document.querySelector('main').style.backgroundColor = color2
+    homeImg.style.border = `.8vw solid ${color2}`;
   }, 1000);
   setTimeout(() => {
     circle.style.display = 'none';
   }, 2000);
 }
+const hideAll = () => {
+  home.style.display = 'none'
+  intro.style.display = 'none'
+  projects.style.display = 'none'
+  skills.style.display = 'none'
+  contact.style.display = 'none'
+}
+const showSection = (sect) => {
+  sect.style.display = 'flex'
+  sect.style.flexDirection = 'column'
+}
+
 
 homeImg.addEventListener('click', (e) => {
-  buttonFX(e.clientX, e.clientY, '#ebbab9', '#945659')});
+  buttonFX(e.clientX, e.clientY, '#ebbab9', '#643738')
+  setTimeout(() => {
+    hideAll()
+    showSection(home)
+  }, 1000);
+});
 introBtn.addEventListener('click', (e) => {
-  buttonFX(e.clientX, e.clientY, '#363634', '#643738')});
+  buttonFX(e.clientX, e.clientY, '#363634', '#945659')
+  setTimeout(() => {
+    hideAll()
+    showSection(intro)
+}, 1000);
+});
 projectsBtn.addEventListener('click', (e) => {
-  buttonFX(e.clientX, e.clientY, '#945659', '#120e0e')});
+  buttonFX(e.clientX, e.clientY, '#945659', '#120e0e')
+  setTimeout(() => {
+    hideAll()
+    showSection(projects)
+}, 1000);
+});
 skillsBtn.addEventListener('click', (e) => {
-  buttonFX(e.clientX, e.clientY, '#643738', '#ebbab9')});
+  buttonFX(e.clientX, e.clientY, '#643738', '#ebbab9')
+  setTimeout(() => {
+    hideAll()
+    showSection(skills)
+}, 1000);
+});
 contactBtn.addEventListener('click', (e) => {
-  buttonFX(e.clientX, e.clientY, '#120e0e', '#363634')});
+  buttonFX(e.clientX, e.clientY, '#120e0e', '#363634')
+  setTimeout(() => {
+    hideAll()
+    showSection(contact)
+}, 1000);
+});
