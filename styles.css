@@ -68,26 +68,24 @@ section {
   flex-direction: column;
   flex-wrap: nowrap;
   overflow: auto;
+  font-family: 'Comfortaa', cursive;
 }
 section p {
   padding: 1vh;
   width: 80%;
-  font-family: 'Comfortaa', cursive;
   text-indent: 5%;
   font-weight: 600;
 }
 #home {
   color: #ebbab9;
   align-items: center;
-  font-family: 'Comfortaa', cursive;
+  justify-content: center;
 }
 #home h1 {
-  font-size: 14vh;
-  /* margin: 3vh; */
-  margin-top: 18%;
+  font-size: 7vw;
 }
 #home h2 {
-  font-size: 5vh;
+  font-size: 2vw;
   margin: 4vh;
 }
 #intro {
