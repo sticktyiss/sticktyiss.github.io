@@ -69,12 +69,12 @@ section {
   flex-wrap: nowrap;
   overflow: auto;
   font-family: 'Comfortaa', cursive;
+  font-weight: 600;
 }
 section p {
   padding: 1vh;
   width: 80%;
   text-indent: 5%;
-  font-weight: 600;
 }
 #home {
   color: #ebbab9;

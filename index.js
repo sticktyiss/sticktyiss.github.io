@@ -30,7 +30,7 @@ const buttonFX = (x, y, color1, color2) => {
     circle.style.transform = 'scale(1)';
   }, 100);
   setTimeout(() => {
-    circle.style.transitionDuration = '1s';
+    circle.style.transitionDuration = '.75s';
     circle.style.transform = 'scale(0)';
     document.body.style.backgroundColor = color1;
     sideBar.style.backgroundColor = color1;
