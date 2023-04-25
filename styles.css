@@ -99,6 +99,14 @@ section p {
 }
 #contact {
   color: #120e0e;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#contact img {
+  margin: 5%;
+  max-height: 10vh;
+  /* max-width: 10vw; */
 }
 .hide {
   display: none;

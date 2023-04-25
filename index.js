@@ -26,8 +26,8 @@ const buttonFX = (x, y, color1, color2) => {
   circle.style.zIndex = 11;
   document.body.appendChild(circle);
   setTimeout(() => {
-    circle.style.transitionDuration = '1s';
-    circle.style.transform = 'scale(1)';
+    circle.style.transitionDuration = '1.25s';
+    circle.style.transform = 'scale(2)';
   }, 100);
   setTimeout(() => {
     circle.style.transitionDuration = '.75s';
@@ -36,7 +36,7 @@ const buttonFX = (x, y, color1, color2) => {
     sideBar.style.backgroundColor = color1;
     document.querySelector('main').style.backgroundColor = color2
     homeImg.style.border = `.8vw solid ${color2}`;
-  }, 1000);
+  }, 1250);
   setTimeout(() => {
     circle.style.display = 'none';
   }, 2000);
@@ -55,7 +55,7 @@ const showSection = (sect) => {
 
 
 homeImg.addEventListener('click', (e) => {
-  buttonFX(e.clientX, e.clientY, '#ebbab9', '#643738')
+  buttonFX(e.clientX, e.clientY, '#ebbab9', '#945659')
   setTimeout(() => {
     hideAll()
     showSection(home)
