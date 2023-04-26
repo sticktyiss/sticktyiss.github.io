@@ -9,6 +9,9 @@ const intro = document.querySelector('#intro')
 const projects = document.querySelector('#projects')
 const skills = document.querySelector('#skills')
 const contact = document.querySelector('#contact')
+const linkedin = document.querySelector('#linkedin')
+const github = document.querySelector('#github')
+const linktree = document.querySelector('#linktree')
 
 
 const buttonFX = (x, y, color1, color2) => {
@@ -50,7 +53,7 @@ const hideAll = () => {
 }
 const showSection = (sect) => {
   sect.style.display = 'flex'
-  sect.style.flexDirection = 'column'
+  // sect.style.flexDirection = 'column'
 }
 
 
@@ -88,4 +91,14 @@ contactBtn.addEventListener('click', (e) => {
     hideAll()
     showSection(contact)
 }, 1000);
+});
+
+linkedin.addEventListener('click', () => {
+  window.open('https://www.linkedin.com/in/tyiss-goodman-6771b31a9/')
+});
+github.addEventListener('click', () => {
+  window.open('https://github.com/sticktyiss')
+});
+linktree.addEventListener('click', () => {
+  window.open('https://linktr.ee/theorylinks')
 });
