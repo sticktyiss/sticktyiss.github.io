@@ -41,6 +41,7 @@ main {
   padding: 5px 10px 5px 10px;
   font-family: 'Comfortaa', cursive;
   font-weight: bold;
+  font-size: 2vh;
   cursor: pointer;
 }
 #sideBar button:hover {
@@ -73,6 +74,9 @@ section p {
   width: 80%;
   text-indent: 5%;
 }
+section p span {
+  font-family: 'Chokokutai';
+}
 #home {
   color: #ebbab9;
   display: flex;
@@ -91,6 +95,9 @@ section p {
 #intro {
   color: #363634;
   flex-direction: column;
+}
+#intro h1 {
+  font-size: 5vh;
 }
 #projects {
   color: #945659;
@@ -117,8 +124,8 @@ section p {
 }
 #contact img {
   margin: 5%;
-  max-height: 10vh;
-  /* max-width: 10vw; */
+  max-height: 20vh;
+  cursor: pointer;
 }
 .hide {
   display: none;
