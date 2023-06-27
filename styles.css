@@ -154,8 +154,8 @@ section p span {
   background-color: #643738;
 }
 #skills img {
-  max-height: 10vw;
-  max-width: 10vw;
+  height: 10vw;
+  width: 10vw;
   margin: 10px;
 }
 #certificates {
