@@ -2,18 +2,20 @@ const homeImg = document.querySelector('#sideBar img');
 const introBtn = document.querySelector('#introBtn');
 const projectsBtn = document.querySelector('#projectsBtn');
 const skillsBtn = document.querySelector('#skillsBtn');
+const certsBtn = document.querySelector('#certsBtn')
 const contactBtn = document.querySelector('#contactBtn');
 const sideBar = document.querySelector('#sideBar');
 const home = document.querySelector('#home')
 const intro = document.querySelector('#intro')
 const projects = document.querySelector('#projects')
 const skills = document.querySelector('#skills')
+const certificates = document.querySelector('#certificates')
 const contact = document.querySelector('#contact')
 const linkedin = document.querySelector('#linkedin')
 const github = document.querySelector('#github')
 const linktree = document.querySelector('#linktree')
 
-
+// CIRCLE BUTTON ANIMATION
 const buttonFX = (x, y, color1, color2) => {
   const circle = document.createElement('div');
   const diameter = Math.max(document.documentElement.clientWidth, window.innerWidth) * 2;
@@ -49,46 +51,72 @@ const hideAll = () => {
   intro.style.display = 'none'
   projects.style.display = 'none'
   skills.style.display = 'none'
+  certificates.style.display = 'none'
   contact.style.display = 'none'
 }
 const showSection = (sect) => {
+  hideAll()
   sect.style.display = 'flex'
-  // sect.style.flexDirection = 'column'
 }
+// WORD WAVE ANIMATION
+const wordElement = document.getElementById('wizard');
+let amplitude = 3; // Adjust the value to control the height of the wave
+let frequency = 0.25; // Adjust the value to control the speed of the wave
+function animateWave() {
+  const word = wordElement.innerText;
+  let waveText = '';
+  for (let i = 0; i < word.length; i++) {
+    const offset = amplitude * Math.sin(frequency + (i+.5));
+    waveText += `<span style="position:relative; top:${offset}px">${word[i]}</span>`;
+  }
+  wordElement.innerHTML = waveText;
+  // Update the amplitude and frequency for different effects
+  // amplitude += .01;
+  frequency += .1;  
+  
+  requestAnimationFrame(animateWave);
+}
+animateWave();
+
+
+// Invoke the starting page
+showSection(home)
 
 
 homeImg.addEventListener('click', (e) => {
   buttonFX(e.clientX, e.clientY, '#ebbab9', '#945659')
   setTimeout(() => {
-    hideAll()
     showSection(home)
   }, 1000);
 });
 introBtn.addEventListener('click', (e) => {
   buttonFX(e.clientX, e.clientY, '#363634', '#945659')
   setTimeout(() => {
-    hideAll()
     showSection(intro)
 }, 1000);
 });
 projectsBtn.addEventListener('click', (e) => {
   buttonFX(e.clientX, e.clientY, '#945659', '#120e0e')
   setTimeout(() => {
-    hideAll()
     showSection(projects)
 }, 1000);
 });
 skillsBtn.addEventListener('click', (e) => {
   buttonFX(e.clientX, e.clientY, '#643738', '#ebbab9')
   setTimeout(() => {
-    hideAll()
     showSection(skills)
+}, 1000);
+});
+certsBtn.addEventListener('click', (e) => {
+  buttonFX(e.clientX, e.clientY, '#ebbab9', '#120e0e')
+  setTimeout(() => {
+    hideAll()
+    showSection(certificates)
 }, 1000);
 });
 contactBtn.addEventListener('click', (e) => {
   buttonFX(e.clientX, e.clientY, '#120e0e', '#363634')
   setTimeout(() => {
-    hideAll()
     showSection(contact)
 }, 1000);
 });
