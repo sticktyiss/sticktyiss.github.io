@@ -117,12 +117,27 @@ section p span {
   line-height: 3vh;
 }
 #projects {
-  color: #945659;
   flex-direction: column;
   align-items: center;
 }
+#projects > div {
+  color: #945659;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5vh 0px;
+}
 #projects::-webkit-scrollbar-thumb {
   background-color: #945659;
+}
+#projects h1 {
+  font-family: Chokokutai;
+  font-size: 30px;
+  padding: 20px;
+}
+#projects a {
+  text-decoration: underline solid #945659;
+  color: #945659;
 }
 #projects p  {
   text-align: center;

@@ -142,5 +142,5 @@ github.addEventListener("click", () => {
   window.open("https://github.com/sticktyiss");
 });
 linktree.addEventListener("click", () => {
-  window.open("https://linktr.ee/theorylinks");
+  window.open("https://linktr.ee/tysfullstack");
 });
