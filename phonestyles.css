@@ -59,8 +59,11 @@ main {
 #skillsBtn {
   color: #643738;
 }
-#contactBtn {
+#certsBtn {
   color: #120e0e;
+}
+#contactBtn {
+  color: #ebbab9;
 }
 section {
   margin-top: 13vh;

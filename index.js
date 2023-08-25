@@ -55,8 +55,20 @@ const hideAll = () => {
   certificates.style.display = "none";
   contact.style.display = "none";
 };
-const showSection = (sect) => {
+const showAllBtn = (index) => {
+  const headerBtns = [introBtn, projectsBtn, skillsBtn, certsBtn, contactBtn]
+
+  introBtn.style.display = "flex"
+  projectsBtn.style.display = "flex"
+  skillsBtn.style.display = "flex"
+  certsBtn.style.display = "flex"
+  contactBtn.style.display = "flex"
+
+  headerBtns[index].style.display = "none"
+};
+const showSection = (sect, index) => {
   hideAll();
+  showAllBtn(index);
   sect.style.display = "flex";
 };
 // WORD WAVE ANIMATION
@@ -81,7 +93,7 @@ animateWave();
 
 // CERTIFICATE IMAGE ENLARGEMENT
 certImages = document.querySelectorAll(".certs");
-console.log(certImages);
+// console.log(certImages);
 for (let i = 0; i < certImages.length; i++) {
   certImages[i].addEventListener("click", function () {
     if (!certImages[i].classList.contains("enlarged")) {
@@ -95,43 +107,43 @@ for (let i = 0; i < certImages.length; i++) {
 }
 
 // Invoke the starting page
-showSection(home);
+showSection(home, 4);
 
 homeImg.addEventListener("click", (e) => {
   buttonFX(e.clientX, e.clientY, "#ebbab9", "#945659");
   setTimeout(() => {
-    showSection(home);
+    showSection(home, 4);
   }, 1000);
 });
 introBtn.addEventListener("click", (e) => {
   buttonFX(e.clientX, e.clientY, "#363634", "#945659");
   setTimeout(() => {
-    showSection(intro);
+    showSection(intro, 0);
   }, 1000);
 });
 projectsBtn.addEventListener("click", (e) => {
   buttonFX(e.clientX, e.clientY, "#945659", "#120e0e");
   setTimeout(() => {
-    showSection(projects);
+    showSection(projects, 1);
   }, 1000);
 });
 skillsBtn.addEventListener("click", (e) => {
   buttonFX(e.clientX, e.clientY, "#643738", "#ebbab9");
   setTimeout(() => {
-    showSection(skills);
+    showSection(skills, 2);
   }, 1000);
 });
 certsBtn.addEventListener("click", (e) => {
   buttonFX(e.clientX, e.clientY, "#120e0e", "#ebbab9");
   setTimeout(() => {
     hideAll();
-    showSection(certificates);
+    showSection(certificates, 3);
   }, 1000);
 });
 contactBtn.addEventListener("click", (e) => {
   buttonFX(e.clientX, e.clientY, "#ebbab9", "#363634");
   setTimeout(() => {
-    showSection(contact);
+    showSection(contact, 4);
   }, 1000);
 });
 
