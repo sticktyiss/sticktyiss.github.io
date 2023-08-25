@@ -161,6 +161,39 @@ section p span {
   max-width: 20vw;
   margin: 10px;
 }
+#certificates {
+  /* height: 90vh; */
+  margin-top: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#certificates::-webkit-scrollbar-thumb {
+  background-color: #120e0e;
+}
+#certificates > img {
+  height: auto;
+  width: 40vw;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 5px #120e0e89;
+  cursor: pointer;
+}
+#certificates > img.enlarged {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  margin: 0px;
+  padding: 3% 5% 5% 5%;
+  object-fit: contain;
+  z-index: 9999;
+  cursor: pointer;
+  box-shadow: none;
+  background-color: #120e0e87;
+}
 #contact {
   color: #120e0e;
   flex-direction: column;
