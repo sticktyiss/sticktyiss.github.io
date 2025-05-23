@@ -39,14 +39,15 @@ main {
   border: 2px solid transparent;
   margin: 1vh;
   padding: 5px 10px 5px 10px;
+  background-color: white;
   font-family: 'Comfortaa', cursive;
   font-weight: bold;
   font-size: 2vh;
   cursor: pointer;
+  border-radius: 2vh;
 }
 #sideBar button:hover {
   border: 2px solid white;
-  border-radius: 2vh;
 }
 #introBtn {
   color: #363634;
