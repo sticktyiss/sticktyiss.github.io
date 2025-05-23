@@ -55,17 +55,6 @@ const hideAll = () => {
   certificates.style.display = "none";
   contact.style.display = "none";
 };
-// const showAllBtn = (index) => {
-//   const headerBtns = [introBtn, projectsBtn, skillsBtn, certsBtn, contactBtn]
-
-//   introBtn.style.display = "flex"
-//   projectsBtn.style.display = "flex"
-//   skillsBtn.style.display = "flex"
-//   certsBtn.style.display = "flex"
-//   contactBtn.style.display = "flex"
-
-//   // headerBtns[index].style.display = "none"
-// };
 const showSection = (sect, index) => {
   hideAll();
   // showAllBtn(index);
