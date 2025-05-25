@@ -39,7 +39,7 @@ main {
 }
 
 #sideBar button {
-  border: 2px solid transparent;
+  border: 0.2em solid #945659;
   margin: 1vh;
   padding: 5px 10px 5px 10px;
   font-family: "Comfortaa", cursive;
@@ -47,15 +47,15 @@ main {
   font-size: 2vh;
   cursor: pointer;
   border-radius: 2vh;
-  background-color: #945659;
-  color: #ebbab9;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  background-color: #ebbab9;
+  color: #945659;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
   box-shadow: 0 0 var(--shadowColor, #945659);
 }
 
 #sideBar button:hover {
-  box-shadow: -4px 4px var(--shadowColor, #945659);
-  transform: translateY(-4px) translateX(4px);
+  box-shadow: -6px 6px var(--shadowColor, #945659);
+  transform: translateX(6px) translateY(-6px);
 }
 
 section {

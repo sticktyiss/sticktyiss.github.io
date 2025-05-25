@@ -46,7 +46,7 @@ main {
   cursor: pointer;
 }
 #sideBar button {
-  border: 2px solid transparent;
+  border: .2em solid $colorRed;
   margin: 1vh;
   padding: 5px 10px 5px 10px;
   font-family: $fontMain;
@@ -54,14 +54,14 @@ main {
   font-size: 2vh;
   cursor: pointer;
   border-radius: 2vh;
-  background-color: $colorRed;
-  color: $colorPink;
-  transition: box-shadow .2s ease, transform .2s ease;
+  background-color: $colorPink;
+  color: $colorRed;
+  transition: box-shadow .3s ease, transform .3s ease;
   box-shadow: 0 0 var(--shadowColor, $colorRed);
 }
 #sideBar button:hover {
-  box-shadow: -4px  4px var(--shadowColor, $colorRed);
-  transform: translateY(-4px) translateX(4px);
+  box-shadow:  -6px  6px var(--shadowColor, $colorRed);
+  transform: translateX(6px) translateY(-6px);
 }
 section {
   margin-left: 10vw;
