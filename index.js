@@ -1,4 +1,5 @@
 const homeImg = document.querySelector("#sideBar img");
+const sideBarBtn = document.querySelectorAll("#sideBar button");
 const introBtn = document.querySelector("#introBtn");
 const projectsBtn = document.querySelector("#projectsBtn");
 const skillsBtn = document.querySelector("#skillsBtn");
@@ -40,6 +41,10 @@ const buttonFX = (x, y, color1, color2) => {
     circle.style.transform = "scale(0)";
     document.body.style.backgroundColor = color1;
     sideBar.style.backgroundColor = color1;
+    sideBarBtn.forEach(button => {
+      button.style.color = color1;
+      button.style.backgroundColor = color2;
+    });
     document.querySelector("main").style.backgroundColor = color2;
     homeImg.style.border = `.8vw solid ${color2}`;
   }, 1250);
