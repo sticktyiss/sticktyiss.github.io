@@ -1,3 +1,5 @@
+$fontMain: 'Comfortaa', cursive;
+
 body {
   height: 100vh;
   background-color: #ebbab9;
@@ -40,7 +42,7 @@ main {
   margin: 1vh;
   padding: 5px 10px 5px 10px;
   background-color: white;
-  font-family: 'Comfortaa', cursive;
+  font-family: $fontMain;
   font-weight: bold;
   font-size: 2vh;
   cursor: pointer;
@@ -69,7 +71,7 @@ section {
   margin-right: 10vw;
   width: 60vw;
   height: 90%;
-  font-family: 'Comfortaa', cursive;
+  font-family: $fontMain;
   font-weight: 600;
   overflow: auto;
   display: flex;
