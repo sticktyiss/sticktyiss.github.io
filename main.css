@@ -49,31 +49,13 @@ main {
   border-radius: 2vh;
   background-color: #945659;
   color: #ebbab9;
-  transition: box-shadow 1s ease;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+  box-shadow: 0 0 white;
 }
 
 #sideBar button:hover {
-  box-shadow: -8px 4px white;
-}
-
-#introBtn {
-  color: #363634;
-}
-
-#projectsBtn {
-  color: #945659;
-}
-
-#skillsBtn {
-  color: #643738;
-}
-
-#certsBtn {
-  color: #120e0e;
-}
-
-#contactBtn {
-  color: #ebbab9;
+  box-shadow: -4px 4px white;
+  transform: translateY(-2px) translateX(2px);
 }
 
 section {
