@@ -6,10 +6,12 @@ $colorBrown: #643738;
 $colorBlack: #120e0e;
 $colorPink: #ebbab9;
 
+$colorShadow: #120e0e85;
+
 
 body {
   height: 100vh;
-  background-color: #ebbab9;
+  background-color: $colorPink;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,11 +23,11 @@ main {
   justify-content: center;
   height: 75vh;
   width: 100vw;
-  background-color: #945659;
+  background-color: $colorRed;
 }
 #sideBar {
   z-index: 10;
-  background-color: #ebbab9;
+  background-color: $colorPink;
   width: 20vw;
   height: 70vh;
   border-top-right-radius: 10vh;
@@ -40,38 +42,38 @@ main {
   width: 10vw;
   height: 10vw;
   border-radius: 50%;
-  border: .8vw solid #945659;
+  border: .8vw solid $colorRed;
   cursor: pointer;
 }
 #sideBar button {
-  background-color: transparent;
   border: 2px solid transparent;
   margin: 1vh;
   padding: 5px 10px 5px 10px;
-  background-color: white;
   font-family: $fontMain;
   font-weight: bold;
   font-size: 2vh;
   cursor: pointer;
   border-radius: 2vh;
+  background-color: $colorRed;
+  color: $colorPink;
 }
 #sideBar button:hover {
-  border: 2px solid white;
+  // border: 2px solid white;
 }
 #introBtn {
-  color: #363634;
+  color: $colorGrey;
 }
 #projectsBtn {
-  color: #945659;
+  color: $colorRed;
 }
 #skillsBtn {
-  color: #643738;
+  color: $colorBrown;
 }
 #certsBtn {
-  color: #120e0e;
+  color: $colorBlack;
 }
 #contactBtn {
-  color: #ebbab9;
+  color: $colorPink;
 }
 section {
   margin-left: 10vw;
@@ -100,7 +102,7 @@ section p span {
 }
 /* SECTION SPECIFIC CSS START */
 #home {
-  color: #ebbab9;
+  color: $colorPink;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -115,7 +117,7 @@ section p span {
   margin: 4vh;
 }
 #intro {
-  color: #363634;
+  color: $colorGrey;
   flex-direction: column;
   align-items: center;
 }
@@ -131,14 +133,14 @@ section p span {
   align-items: center;
 }
 #projects > div {
-  color: #945659;
+  color: $colorRed;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 5vh 0px;
 }
 #projects::-webkit-scrollbar-thumb {
-  background-color: #945659;
+  background-color: $colorRed;
 }
 #projects h1 {
   font-family: Chokokutai;
@@ -146,19 +148,19 @@ section p span {
   padding: 20px;
 }
 #sideQ {
-  color: #945659;
-  border: 10px double #945659;
+  color: $colorRed;
+  border: 10px double $colorRed;
   margin-top: 30px;  
 }
 #projects a {
-  text-decoration: underline solid #945659;
-  color: #945659;
+  text-decoration: underline solid $colorRed;
+  color: $colorRed;
 }
 #projects p  {
   text-align: center;
 }
 #skills {
-  color: #643738;
+  color: $colorBrown;
   align-items: center;
   /* overflow: auto; */
   flex-wrap: wrap;
@@ -166,7 +168,7 @@ section p span {
   justify-content: center;
 }
 #skills::-webkit-scrollbar-thumb {
-  background-color: #643738;
+  background-color: $colorBrown;
 }
 #skills img {
   height: 10vw;
@@ -180,14 +182,14 @@ section p span {
   justify-content: center;
 }
 #certificates::-webkit-scrollbar-thumb {
-  background-color: #120e0e;
+  background-color: $colorBlack;
 }
 #certificates > img {
   height: auto;
   width: 25vw;
   margin: 10px;
   border-radius: 10px;
-  box-shadow: 4px 4px 5px #120e0e89;
+  box-shadow: 4px 4px 5px $colorShadow;
   cursor: pointer;
 }
 #certificates > img.enlarged {
@@ -202,10 +204,10 @@ section p span {
   z-index: 9999;
   cursor: pointer;
   box-shadow: none;
-  background-color: #120e0e87;
+  background-color: #120e0e;
 }
 #contact {
-  color: #120e0e;
+  color: $colorBlack;
   flex-direction: row;
   justify-content: center;
   align-items: center;

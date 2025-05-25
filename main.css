@@ -39,20 +39,16 @@ main {
 }
 
 #sideBar button {
-  background-color: transparent;
   border: 2px solid transparent;
   margin: 1vh;
   padding: 5px 10px 5px 10px;
-  background-color: white;
   font-family: "Comfortaa", cursive;
   font-weight: bold;
   font-size: 2vh;
   cursor: pointer;
   border-radius: 2vh;
-}
-
-#sideBar button:hover {
-  border: 2px solid white;
+  background-color: #945659;
+  color: #ebbab9;
 }
 
 #introBtn {
@@ -212,7 +208,7 @@ section p span {
   width: 25vw;
   margin: 10px;
   border-radius: 10px;
-  box-shadow: 4px 4px 5px rgba(18, 14, 14, 0.537254902);
+  box-shadow: 4px 4px 5px rgba(18, 14, 14, 0.5215686275);
   cursor: pointer;
 }
 
@@ -228,7 +224,7 @@ section p span {
   z-index: 9999;
   cursor: pointer;
   box-shadow: none;
-  background-color: rgba(18, 14, 14, 0.5294117647);
+  background-color: #120e0e;
 }
 
 #contact {

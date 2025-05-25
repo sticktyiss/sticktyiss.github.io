@@ -55,9 +55,8 @@ const hideAll = () => {
   certificates.style.display = "none";
   contact.style.display = "none";
 };
-const showSection = (sect, index) => {
+const showSection = (sect) => {
   hideAll();
-  // showAllBtn(index);
   sect.style.display = "flex";
 };
 // WORD WAVE ANIMATION
@@ -96,43 +95,43 @@ for (let i = 0; i < certImages.length; i++) {
 }
 
 // Invoke the starting page
-showSection(home, 4);
+showSection(home);
 
 homeImg.addEventListener("click", (e) => {
   buttonFX(e.clientX, e.clientY, "#ebbab9", "#945659");
   setTimeout(() => {
-    showSection(home, 4);
+    showSection(home);
   }, 1000);
 });
 introBtn.addEventListener("click", (e) => {
   buttonFX(e.clientX, e.clientY, "#363634", "#945659");
   setTimeout(() => {
-    showSection(intro, 0);
+    showSection(intro);
   }, 1000);
 });
 projectsBtn.addEventListener("click", (e) => {
   buttonFX(e.clientX, e.clientY, "#945659", "#120e0e");
   setTimeout(() => {
-    showSection(projects, 1);
+    showSection(projects);
   }, 1000);
 });
 skillsBtn.addEventListener("click", (e) => {
   buttonFX(e.clientX, e.clientY, "#643738", "#ebbab9");
   setTimeout(() => {
-    showSection(skills, 2);
+    showSection(skills);
   }, 1000);
 });
 certsBtn.addEventListener("click", (e) => {
   buttonFX(e.clientX, e.clientY, "#120e0e", "#ebbab9");
   setTimeout(() => {
     hideAll();
-    showSection(certificates, 3);
+    showSection(certificates);
   }, 1000);
 });
 contactBtn.addEventListener("click", (e) => {
   buttonFX(e.clientX, e.clientY, "#ebbab9", "#363634");
   setTimeout(() => {
-    showSection(contact, 4);
+    showSection(contact);
   }, 1000);
 });
 
