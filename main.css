@@ -49,6 +49,11 @@ main {
   border-radius: 2vh;
   background-color: #945659;
   color: #ebbab9;
+  transition: box-shadow 1s ease;
+}
+
+#sideBar button:hover {
+  box-shadow: -8px 4px white;
 }
 
 #introBtn {

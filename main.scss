@@ -56,9 +56,10 @@ main {
   border-radius: 2vh;
   background-color: $colorRed;
   color: $colorPink;
+  transition: box-shadow 1s ease;
 }
 #sideBar button:hover {
-  // border: 2px solid white;
+  box-shadow: -8px  4px white;
 }
 #introBtn {
   color: $colorGrey;

@@ -48,11 +48,8 @@ const buttonFX = (x, y, color1, color2, index) => {
     });
     sideBarBtn[index].style.color = color2;
     sideBarBtn[index].style.backgroundColor = color1;
-    sideBarBtn[index].style.border = "2px solid white";
-    /*
-    sideBarBtn[index].style.
-    sideBarBtn[index].style.
-    */
+    sideBarBtn[index].style.border = ".2em solid";
+    sideBarBtn[index].style.borderColor = color2;
     document.querySelector("main").style.backgroundColor = color2;
     homeImg.style.border = `.8vw solid ${color2}`;
   }, 1250);
