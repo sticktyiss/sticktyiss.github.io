@@ -42,15 +42,16 @@ const buttonFX = (x, y, color1, color2, index) => {
     document.body.style.backgroundColor = color1;
     sideBar.style.backgroundColor = color1;
     sideBarBtn.forEach(button => {
-      button.style.color = color1;
-      button.style.backgroundColor = color2;
-      button.style.border = "none";
+      button.style.color = color2;
+      button.style.backgroundColor = color1;
+      button.style.border = ".2em solid";
+      button.style.borderColor = color2;
       button.style.setProperty('--shadowColor', color2);
     });
-    sideBarBtn[index].style.color = color2;
-    sideBarBtn[index].style.backgroundColor = color1;
-    sideBarBtn[index].style.border = ".2em solid";
-    sideBarBtn[index].style.borderColor = color2;
+    if (index != "intro") {
+      sideBarBtn[index].style.color = color1;
+      sideBarBtn[index].style.backgroundColor = color2;
+    }
     document.querySelector("main").style.backgroundColor = color2;
     homeImg.style.border = `.8vw solid ${color2}`;
   }, 1250);
@@ -109,7 +110,7 @@ for (let i = 0; i < certImages.length; i++) {
 showSection(home);
 
 homeImg.addEventListener("click", (e) => {
-  buttonFX(e.clientX, e.clientY, "#ebbab9", "#945659");
+  buttonFX(e.clientX, e.clientY, "#ebbab9", "#945659", "intro");
   setTimeout(() => {
     showSection(home);
   }, 1000);
