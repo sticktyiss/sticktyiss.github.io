@@ -45,6 +45,7 @@ const buttonFX = (x, y, color1, color2, index) => {
       button.style.color = color1;
       button.style.backgroundColor = color2;
       button.style.border = "none";
+      button.style.setProperty('--shadowColor', color2);
     });
     sideBarBtn[index].style.color = color2;
     sideBarBtn[index].style.backgroundColor = color1;

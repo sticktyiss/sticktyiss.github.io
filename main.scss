@@ -56,12 +56,12 @@ main {
   border-radius: 2vh;
   background-color: $colorRed;
   color: $colorPink;
-  transition: box-shadow .4s ease, transform .4s ease;
-  box-shadow: 0 0 white;
+  transition: box-shadow .2s ease, transform .2s ease;
+  box-shadow: 0 0 var(--shadowColor, $colorRed);
 }
 #sideBar button:hover {
-  box-shadow: -4px  4px white;
-  transform: translateY(-2px) translateX(2px);
+  box-shadow: -4px  4px var(--shadowColor, $colorRed);
+  transform: translateY(-4px) translateX(4px);
 }
 section {
   margin-left: 10vw;
