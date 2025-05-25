@@ -17,7 +17,7 @@ const github = document.querySelector("#github");
 const linktree = document.querySelector("#linktree");
 
 // CIRCLE BUTTON ANIMATION
-const buttonFX = (x, y, color1, color2) => {
+const buttonFX = (x, y, color1, color2, index) => {
   const circle = document.createElement("div");
   const diameter =
     Math.max(document.documentElement.clientWidth, window.innerWidth) * 2;
@@ -44,7 +44,15 @@ const buttonFX = (x, y, color1, color2) => {
     sideBarBtn.forEach(button => {
       button.style.color = color1;
       button.style.backgroundColor = color2;
+      button.style.border = "none";
     });
+    sideBarBtn[index].style.color = color2;
+    sideBarBtn[index].style.backgroundColor = color1;
+    sideBarBtn[index].style.border = "2px solid white";
+    /*
+    sideBarBtn[index].style.
+    sideBarBtn[index].style.
+    */
     document.querySelector("main").style.backgroundColor = color2;
     homeImg.style.border = `.8vw solid ${color2}`;
   }, 1250);
@@ -109,32 +117,32 @@ homeImg.addEventListener("click", (e) => {
   }, 1000);
 });
 introBtn.addEventListener("click", (e) => {
-  buttonFX(e.clientX, e.clientY, "#363634", "#945659");
+  buttonFX(e.clientX, e.clientY, "#363634", "#945659", 0);
   setTimeout(() => {
     showSection(intro);
   }, 1000);
 });
 projectsBtn.addEventListener("click", (e) => {
-  buttonFX(e.clientX, e.clientY, "#945659", "#120e0e");
+  buttonFX(e.clientX, e.clientY, "#945659", "#120e0e", 1);
   setTimeout(() => {
     showSection(projects);
   }, 1000);
 });
 skillsBtn.addEventListener("click", (e) => {
-  buttonFX(e.clientX, e.clientY, "#643738", "#ebbab9");
+  buttonFX(e.clientX, e.clientY, "#643738", "#ebbab9", 2);
   setTimeout(() => {
     showSection(skills);
   }, 1000);
 });
 certsBtn.addEventListener("click", (e) => {
-  buttonFX(e.clientX, e.clientY, "#120e0e", "#ebbab9");
+  buttonFX(e.clientX, e.clientY, "#120e0e", "#ebbab9", 3);
   setTimeout(() => {
     hideAll();
     showSection(certificates);
   }, 1000);
 });
 contactBtn.addEventListener("click", (e) => {
-  buttonFX(e.clientX, e.clientY, "#ebbab9", "#363634");
+  buttonFX(e.clientX, e.clientY, "#ebbab9", "#363634", 4);
   setTimeout(() => {
     showSection(contact);
   }, 1000);
@@ -145,7 +153,4 @@ linkedin.addEventListener("click", () => {
 });
 github.addEventListener("click", () => {
   window.open("https://github.com/sticktyiss");
-});
-linktree.addEventListener("click", () => {
-  window.open("https://linktr.ee/tysfullstack");
 });
