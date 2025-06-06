@@ -1,4 +1,5 @@
 const homeImg = document.querySelector("#sideBar img");
+const sideBarBtn = document.querySelectorAll("#sideBar button");
 const introBtn = document.querySelector("#introBtn");
 const projectsBtn = document.querySelector("#projectsBtn");
 const skillsBtn = document.querySelector("#skillsBtn");
@@ -16,7 +17,7 @@ const github = document.querySelector("#github");
 const linktree = document.querySelector("#linktree");
 
 // CIRCLE BUTTON ANIMATION
-const buttonFX = (x, y, color1, color2) => {
+const buttonFX = (x, y, color1, color2, index) => {
   const circle = document.createElement("div");
   const diameter =
     Math.max(document.documentElement.clientWidth, window.innerWidth) * 2;
@@ -40,6 +41,17 @@ const buttonFX = (x, y, color1, color2) => {
     circle.style.transform = "scale(0)";
     document.body.style.backgroundColor = color1;
     sideBar.style.backgroundColor = color1;
+    sideBarBtn.forEach(button => {
+      button.style.color = color2;
+      button.style.backgroundColor = color1;
+      button.style.border = ".2em solid";
+      button.style.borderColor = color2;
+      button.style.setProperty('--shadowColor', color2);
+    });
+    if (index != "intro") {
+      sideBarBtn[index].style.color = color1;
+      sideBarBtn[index].style.backgroundColor = color2;
+    }
     document.querySelector("main").style.backgroundColor = color2;
     homeImg.style.border = `.8vw solid ${color2}`;
   }, 1250);
@@ -55,9 +67,8 @@ const hideAll = () => {
   certificates.style.display = "none";
   contact.style.display = "none";
 };
-const showSection = (sect, index) => {
+const showSection = (sect) => {
   hideAll();
-  // showAllBtn(index);
   sect.style.display = "flex";
 };
 // WORD WAVE ANIMATION
@@ -96,43 +107,43 @@ for (let i = 0; i < certImages.length; i++) {
 }
 
 // Invoke the starting page
-showSection(home, 4);
+showSection(home);
 
 homeImg.addEventListener("click", (e) => {
-  buttonFX(e.clientX, e.clientY, "#ebbab9", "#945659");
+  buttonFX(e.clientX, e.clientY, "#ebbab9", "#945659", "intro");
   setTimeout(() => {
-    showSection(home, 4);
+    showSection(home);
   }, 1000);
 });
 introBtn.addEventListener("click", (e) => {
-  buttonFX(e.clientX, e.clientY, "#363634", "#945659");
+  buttonFX(e.clientX, e.clientY, "#363634", "#945659", 0);
   setTimeout(() => {
-    showSection(intro, 0);
+    showSection(intro);
   }, 1000);
 });
 projectsBtn.addEventListener("click", (e) => {
-  buttonFX(e.clientX, e.clientY, "#945659", "#120e0e");
+  buttonFX(e.clientX, e.clientY, "#945659", "#120e0e", 1);
   setTimeout(() => {
-    showSection(projects, 1);
+    showSection(projects);
   }, 1000);
 });
 skillsBtn.addEventListener("click", (e) => {
-  buttonFX(e.clientX, e.clientY, "#643738", "#ebbab9");
+  buttonFX(e.clientX, e.clientY, "#643738", "#ebbab9", 2);
   setTimeout(() => {
-    showSection(skills, 2);
+    showSection(skills);
   }, 1000);
 });
 certsBtn.addEventListener("click", (e) => {
-  buttonFX(e.clientX, e.clientY, "#120e0e", "#ebbab9");
+  buttonFX(e.clientX, e.clientY, "#120e0e", "#ebbab9", 3);
   setTimeout(() => {
     hideAll();
-    showSection(certificates, 3);
+    showSection(certificates);
   }, 1000);
 });
 contactBtn.addEventListener("click", (e) => {
-  buttonFX(e.clientX, e.clientY, "#ebbab9", "#363634");
+  buttonFX(e.clientX, e.clientY, "#ebbab9", "#363634", 4);
   setTimeout(() => {
-    showSection(contact, 4);
+    showSection(contact);
   }, 1000);
 });
 
@@ -141,7 +152,4 @@ linkedin.addEventListener("click", () => {
 });
 github.addEventListener("click", () => {
   window.open("https://github.com/sticktyiss");
-});
-linktree.addEventListener("click", () => {
-  window.open("https://linktr.ee/tysfullstack");
 });

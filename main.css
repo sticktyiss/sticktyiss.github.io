@@ -6,6 +6,7 @@ body {
   justify-content: center;
   flex-wrap: nowrap;
 }
+
 main {
   display: flex;
   align-items: center;
@@ -14,6 +15,7 @@ main {
   width: 100vw;
   background-color: #945659;
 }
+
 #sideBar {
   z-index: 10;
   background-color: #ebbab9;
@@ -26,69 +28,66 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 #sideBar img {
   margin: 3vh;
   width: 10vw;
   height: 10vw;
   border-radius: 50%;
-  border: .8vw solid #945659;
+  border: 0.8vw solid #945659;
   cursor: pointer;
 }
+
 #sideBar button {
-  background-color: transparent;
-  border: 2px solid transparent;
+  border: 0.2em solid #945659;
   margin: 1vh;
   padding: 5px 10px 5px 10px;
-  background-color: white;
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
   font-weight: bold;
   font-size: 2vh;
   cursor: pointer;
   border-radius: 2vh;
-}
-#sideBar button:hover {
-  border: 2px solid white;
-}
-#introBtn {
-  color: #363634;
-}
-#projectsBtn {
+  background-color: #ebbab9;
   color: #945659;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 var(--shadowColor, #945659);
 }
-#skillsBtn {
-  color: #643738;
+
+#sideBar button:hover {
+  box-shadow: -6px 6px var(--shadowColor, #945659);
+  transform: translateX(6px) translateY(-6px);
 }
-#certsBtn {
-  color: #120e0e;
-}
-#contactBtn {
-  color: #ebbab9;
-}
+
 section {
   margin-left: 10vw;
   margin-right: 10vw;
   width: 60vw;
   height: 90%;
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
   font-weight: 600;
   overflow: auto;
   display: flex;
 }
+
 section::-webkit-scrollbar {
   background-color: transparent;
-  width: .5vw;
+  width: 0.5vw;
 }
+
 section::-webkit-scrollbar-thumb {
   border-radius: 1vw;
 }
+
 section p {
   padding: 1vh;
   width: 80%;
   text-indent: 5%;
 }
+
 section p span {
-  font-family: 'Chokokutai';
+  font-family: "Chokokutai";
 }
+
 /* SECTION SPECIFIC CSS START */
 #home {
   color: #ebbab9;
@@ -98,29 +97,36 @@ section p span {
   align-items: center;
   justify-content: center;
 }
+
 #home h1 {
   font-size: 7vw;
 }
+
 #home h2 {
   font-size: 2vw;
   margin: 4vh;
 }
+
 #intro {
   color: #363634;
   flex-direction: column;
   align-items: center;
 }
+
 #intro h1 {
   font-size: 5vh;
   margin: 2vw;
 }
+
 #intro p {
   line-height: 3vh;
 }
+
 #projects {
   flex-direction: column;
   align-items: center;
 }
+
 #projects > div {
   color: #945659;
   display: flex;
@@ -128,26 +134,32 @@ section p span {
   align-items: center;
   margin: 5vh 0px;
 }
+
 #projects::-webkit-scrollbar-thumb {
   background-color: #945659;
 }
+
 #projects h1 {
   font-family: Chokokutai;
   font-size: 30px;
   padding: 20px;
 }
+
 #sideQ {
   color: #945659;
   border: 10px double #945659;
-  margin-top: 30px;  
+  margin-top: 30px;
 }
+
 #projects a {
   text-decoration: underline solid #945659;
   color: #945659;
 }
-#projects p  {
+
+#projects p {
   text-align: center;
 }
+
 #skills {
   color: #643738;
   align-items: center;
@@ -156,31 +168,37 @@ section p span {
   align-items: center;
   justify-content: center;
 }
+
 #skills::-webkit-scrollbar-thumb {
   background-color: #643738;
 }
+
 #skills img {
   height: 10vw;
   width: 10vw;
   margin: 10px;
 }
+
 #certificates {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
+
 #certificates::-webkit-scrollbar-thumb {
   background-color: #120e0e;
 }
+
 #certificates > img {
   height: auto;
   width: 25vw;
   margin: 10px;
   border-radius: 10px;
-  box-shadow: 4px 4px 5px #120e0e89;
+  box-shadow: 4px 4px 5px rgba(18, 14, 14, 0.5215686275);
   cursor: pointer;
 }
+
 #certificates > img.enlarged {
   position: fixed;
   top: 0;
@@ -193,19 +211,24 @@ section p span {
   z-index: 9999;
   cursor: pointer;
   box-shadow: none;
-  background-color: #120e0e87;
+  background-color: #120e0e;
 }
+
 #contact {
   color: #120e0e;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
+
 #contact img {
   margin: 5%;
   max-height: 20vh;
   cursor: pointer;
 }
+
 .hide {
   display: none;
 }
+
+/*# sourceMappingURL=main.css.map */
