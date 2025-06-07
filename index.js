@@ -33,11 +33,11 @@ const buttonFX = (x, y, color1, color2, index) => {
   circle.style.zIndex = 11;
   document.body.appendChild(circle);
   setTimeout(() => {
-    circle.style.transitionDuration = "1s";
-    circle.style.transform = "scale(2)";
+    circle.style.transitionDuration = ".5s";
+    circle.style.transform = "scale(1)";
   }, 100);
   setTimeout(() => {
-    circle.style.transitionDuration = ".75s";
+    circle.style.transitionDuration = ".5s";
     circle.style.transform = "scale(0)";
     document.body.style.backgroundColor = color1;
     sideBar.style.backgroundColor = color1;
@@ -54,7 +54,7 @@ const buttonFX = (x, y, color1, color2, index) => {
     }
     document.querySelector("main").style.backgroundColor = color2;
     homeImg.style.border = `.8vw solid ${color2}`;
-  }, 1250);
+  }, 500);
   setTimeout(() => {
     circle.style.display = "none";
   }, 2000);
@@ -113,38 +113,38 @@ homeImg.addEventListener("click", (e) => {
   buttonFX(e.clientX, e.clientY, "#ebbab9", "#945659", "intro");
   setTimeout(() => {
     showSection(home);
-  }, 1000);
+  }, 500);
 });
 introBtn.addEventListener("click", (e) => {
   buttonFX(e.clientX, e.clientY, "#363634", "#945659", 0);
   setTimeout(() => {
     showSection(intro);
-  }, 1000);
+  }, 500);
 });
 projectsBtn.addEventListener("click", (e) => {
   buttonFX(e.clientX, e.clientY, "#945659", "#120e0e", 1);
   setTimeout(() => {
     showSection(projects);
-  }, 1000);
+  }, 500);
 });
 skillsBtn.addEventListener("click", (e) => {
   buttonFX(e.clientX, e.clientY, "#643738", "#ebbab9", 2);
   setTimeout(() => {
     showSection(skills);
-  }, 1000);
+  }, 500);
 });
 certsBtn.addEventListener("click", (e) => {
   buttonFX(e.clientX, e.clientY, "#120e0e", "#ebbab9", 3);
   setTimeout(() => {
     hideAll();
     showSection(certificates);
-  }, 1000);
+  }, 500);
 });
 contactBtn.addEventListener("click", (e) => {
   buttonFX(e.clientX, e.clientY, "#ebbab9", "#363634", 4);
   setTimeout(() => {
     showSection(contact);
-  }, 1000);
+  }, 500);
 });
 
 linkedin.addEventListener("click", () => {
