@@ -33,7 +33,7 @@ const buttonFX = (x, y, color1, color2, index) => {
   circle.style.zIndex = 11;
   document.body.appendChild(circle);
   setTimeout(() => {
-    circle.style.transitionDuration = "1.25s";
+    circle.style.transitionDuration = "1s";
     circle.style.transform = "scale(2)";
   }, 100);
   setTimeout(() => {
