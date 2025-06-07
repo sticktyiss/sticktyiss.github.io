@@ -57,7 +57,7 @@ const buttonFX = (x, y, color1, color2, index) => {
   }, 500);
   setTimeout(() => {
     circle.style.display = "none";
-  }, 2000);
+  }, 1000);
 };
 const hideAll = () => {
   home.style.display = "none";
